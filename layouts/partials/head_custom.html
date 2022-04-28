@@ -1,0 +1,16 @@
+<!--
+If you want to include any custom html just before </head>, put it in /layouts/partials/head_custom.html
+Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/head_custom.html doesn't exist.
+-->
+
+{{- if .Site.Params.selfHosted -}}
+   <link rel="stylesheet" href="{{ "css/customfonts.css" | absURL }}" />
+{{- else -}}
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter:400,400italic" />
+{{- end -}}
+
+{{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+
+<link rel="stylesheet" href="{{ "css/cookie.css" | absURL }}" />
