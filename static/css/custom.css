@@ -1,7 +1,7 @@
 .intro-header.big-img .page-heading h1 {
   font-family: "Architects Daughter";
   font-weight: 400;
-  font-size: 150px;
+  font-size: 27px;
   padding: 0px 0;
   color: #970C10;
   text-shadow: 5px 5px 3px #FFF;
@@ -14,4 +14,10 @@
   padding: 0px 0;
   color: rgb(64, 64, 64);
   text-shadow: 5px 5px 3px #FFF;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro-header.big-img .page-heading h1 {
+    font-size: 100px;
+  }
 }
