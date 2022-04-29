@@ -56,7 +56,7 @@
                     {{ else }}
                       <h2 class="{{ $cssType }}-subheading">{{ $subtitle }}</h2>
                     {{ end }}
-                  {{ if not (in .Site.Params.pageSections .Type) }}
+                  {{ if eq $cssType "post" }}
                     {{ partial "post_meta.html" . }}
                   {{ end }}
               </div>
@@ -71,22 +71,22 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="{{ $cssType }}-heading">
-              {{ if eq .Type "list" }}
+              {{ if $cssType "list" }}
                 <h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
               {{ else }}
                 <h1>{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
               {{ end }}
-              {{ if in .Site.Params.pageSections .Type }}
+              {{ if ne $cssType "post" }}
                 <hr class="small">
               {{ end }}
               {{ if $subtitle }}
-                {{ if in .Site.Params.pageSections .Type }}
+                {{ if eq $cssType "page" }}
                   <span class="{{ $cssType }}-subheading">{{ $subtitle }}</span>
                 {{ else }}
                   <h2 class="{{ $cssType }}-subheading">{{ $subtitle }}</h2>
                 {{ end }}
               {{ end }}
-              {{ if not (in .Site.Params.pageSections .Type) }}
+              {{ if $cssType "post" }}
                 {{ partial "post_meta.html" . }}
               {{ end }}
             </div>
