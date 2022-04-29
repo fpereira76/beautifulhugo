@@ -50,7 +50,7 @@
             <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
           {{ end }}
         </p>
-        <p class="credits copyright text-muted">
+        <p class="credits theme-by text-muted">
           {{ if .Site.Params.privacyTerms }}
             <a href="{{ .Site.Params.privacyTerms | absLangURL }}">{{ i18n "privacyTerms" . | safeHTML }}</a>
             {{ if .Site.Params.serviceTerms }}
