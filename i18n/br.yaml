@@ -27,8 +27,10 @@
 - id: words
   one: "palavra"
   other: "palavras"
-- id: policyTerms
+- id: privacyTerms
   translation: "Política de privacidade"
+- id: serviceTerms
+  translation: "Termos de Serviço"
 
 
 # 404 page

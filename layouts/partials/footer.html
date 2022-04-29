@@ -49,10 +49,18 @@
             &nbsp;&bull;&nbsp;
             <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
           {{ end }}
+        </p>
 
-          {{ if .Site.Params.policyTerms }}
-            &nbsp;&bull;&nbsp;
-            <a href="{{ .Site.Params.policyTerms | absLangURL }}">{{ i18n "policyTerms" . | safeHTML }}</a>
+        <p>
+          {{ if .Site.Params.privacyTerms }}
+            <a href="{{ .Site.Params.privacyTerms | absLangURL }}">{{ i18n "privacyTerms" . | safeHTML }}</a>
+            {{ if .Site.Params.serviceTerms }}
+               &nbsp;&bull;&nbsp;
+            {{ end }}
+          {{ end }}
+
+          {{ if .Site.Params.serviceTerms }}
+            <a href="{{ .Site.Params.serviceTerms | absLangURL }}">{{ i18n "serviceTerms" . | safeHTML }}</a>
           {{ end }}
         </p>
 
