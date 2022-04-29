@@ -92,7 +92,7 @@
                   <h2 class="{{ $cssType }}-subheading">{{ $subtitle }}</h2>
                 {{ end }}
               {{ end }}
-              {{ if $cssType "post" }}
+              {{ if eq $cssType "post" }}
                 {{ partial "post_meta.html" . }}
               {{ end }}
             </div>
