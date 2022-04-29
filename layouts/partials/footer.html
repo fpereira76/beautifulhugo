@@ -161,4 +161,8 @@ $(function(){
 <!-- End Delayed Disqus -->
 {{ end }}
 
+{{ if hugo.IsProduction }}
+   {{ partial "adsense-auto.html" }}
+{{ end }}
+
 {{- partial "footer_custom.html" . }}

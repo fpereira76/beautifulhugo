@@ -25,11 +25,6 @@
 
 {{$cssType := $.Scratch.Get "cssType" }}
 
-
-<p> Tipo: {{ $cssType }} </p>
-
-
-
 {{ if or $bigimg $title }}
   {{ if $bigimg }}
     <div id="header-big-imgs" data-num-img={{len $bigimg}}
