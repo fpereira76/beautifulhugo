@@ -16,10 +16,10 @@
 {{ if in .Site.Params.pageSections .Type }}
    {{ $.Scratch.Set "cssType" "page" }}
 {{ else }}
-   {{ if eq .Type "list" }}
-      {{ $.Scratch.Set "cssType" "list" }}
-   {{ else }}
+   {{ if in .Site.Params.postSections .Type }}
       {{ $.Scratch.Set "cssType" "post" }}
+   {{ else }}
+      {{ $.Scratch.Set "cssType" .Type }}
    {{ end }}
 {{ end }}
 
