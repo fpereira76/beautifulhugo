@@ -1,2 +1,2 @@
-{{/* Usage: {{< param "siteParamName" }} */}}
-{{ index .Site.Params (.Get 0) }}
+{{/* Usage: {{< siteparam "siteParamName" }} */}}
+{{ index .Site (.Get 0) }}
