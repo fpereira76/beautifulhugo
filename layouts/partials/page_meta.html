@@ -1,4 +1,4 @@
-{{if not .Params.hideLastmod }}
+{{if not (default false .Params.hideLastmod) }}
    <div class="page-meta">
      {{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
      {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
