@@ -59,6 +59,9 @@
                   {{ if eq $cssType "post" }}
                     {{ partial "post_meta.html" . }}
                   {{ end }}
+                  {{ if eq $cssType "page" }}
+                    {{ partial "page_meta.html" . }}
+                  {{ end }}
               </div>
             </div>
           </div>
