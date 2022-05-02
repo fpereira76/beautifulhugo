@@ -1,2 +1,3 @@
 {{/* Usage: {{< getsiteauthor "authorfield" }} */}}
 {{ index .Page.Site.Author (.Get 0) }}
+{{- /* Strip trailing newline. */ -}}
