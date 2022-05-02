@@ -8,23 +8,32 @@
 - id: lastModified
   translation: "(Last modified on {{ . }})"
 - id: translationsLabel
-  translation: "Other languages: "
+  one: "Other language: "
+  other: "Other languages: "
 - id: translationsSeparator
   translation: ", "
 - id: readMore
   translation: "Read More"
 - id: olderPosts
-  translation: "Older Posts"
+  one: "Older Post"
+  other: "Older Posts"
 - id: newerPosts
-  translation: "Newer Posts"
+  one: "Newer Post"
+  other: "Newer Posts"
 - id: previousPost
   translation: "Previous Post"
 - id: nextPost
   translation: "Next Post"
 - id: readTime
-  translation: "minutes"
+  one: "minute"
+  other: "minutes"
 - id: words
-  translation: "words"
+  one: "word"
+  other: "words"
+- id: privacyTerms
+  translation: "Privacy Policy"
+- id: serviceTerms
+  translation: "Service Terms"
 
 
 # 404 page
@@ -33,7 +42,7 @@
 
 # Footer
 - id: poweredBy # Accepts HTML
-  translation: '<a href="https://gohugo.io">Hugo v{{ .Site.Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>'
+  translation: '<a href="https://gohugo.io">Hugo v{{ .Site.Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Adapted from theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> apud <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>'
 
 # Navigation
 - id: toggleNavigation
@@ -67,7 +76,8 @@
 - id: show
   translation: "Show"
 - id: comments
-  translation: "comments" 
+  one: "comment"
+  other: "comments"
 
 # Related posts
 - id: seeAlso
