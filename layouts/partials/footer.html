@@ -1,8 +1,6 @@
-  {{.Type }}
-
-  {{ if eq .Type "page" }}
-    {{ partial "page_meta.html" . }}
-  {{ end }}
+{{ if eq .Type "page" }}
+  {{ partial "page_meta.html" . }}
+{{ end }}
 <footer>
   <div class="container">
     <div class="row">
