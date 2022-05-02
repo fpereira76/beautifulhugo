@@ -82,3 +82,7 @@
 # Related posts
 - id: seeAlso
   translation: "See also"
+
+# licensing
+- id: ccbysa40
+  translation: 'This work is licensed  under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">creative commons attribution 4.0 international license</a>.'

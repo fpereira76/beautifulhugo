@@ -82,3 +82,7 @@
 # Related posts
 - id: seeAlso
   translation: "Veja também"
+
+# licensing
+- id: ccbysa40
+  translation: 'Este conteúdo está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.pt_BR">Creative Commons Atribuição 4.0 Internacional</a>.'
