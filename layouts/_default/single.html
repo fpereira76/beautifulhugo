@@ -12,7 +12,11 @@
             {{ end }}
           </div>
         {{ end }}
-        {{ partial "licensing" }}
+
+        {{ if (default true .Params.copyright) }}
+           {{ partial "licensing" }}
+        {{ end }}
+
         {{ if $.Param "socialShare" }}
             <hr/>
             <section id="social-share">
