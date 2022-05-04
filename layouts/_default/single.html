@@ -61,7 +61,7 @@
         </ul>
       {{ end }}
 
-      {{ if (and .Site.Params.comments (default false .Params.showcomments)) }}
+      {{ if (and(and .Site.Params.comments (default false .Params.showcomments)) or((in .Site.Params.pageSections .Type)(in .Site.Params.postSections .Type)) ) }}
         {{ if .Site.DisqusShortname }}
           {{ if .Site.Params.delayDisqus }}
           <div class="disqus-comments">
