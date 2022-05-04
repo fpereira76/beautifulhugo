@@ -34,6 +34,8 @@
   translation: "Política de privacidade"
 - id: serviceTerms
   translation: "Termos de Serviço"
+- id: aboutus
+  translation: "Sobre nós"
 
 
 # 404 page
