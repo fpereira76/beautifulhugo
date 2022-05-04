@@ -44,7 +44,7 @@
 
 # Footer
 - id: poweredBy # Accepts HTML
-  translation: '<a href="https://gohugo.io">Gerado com Hugo v{{ .Site.Hugo.Version }}</a> &nbsp;&bull;&nbsp; Adaptado do tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> apud <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>'
+  translation: '<a href="https://gohugo.io">Gerado com Hugo v{{ .Site.Hugo.Version }}</a> &nbsp;&bull;&nbsp; Adaptado do tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
 
 # Navigation
 - id: toggleNavigation
