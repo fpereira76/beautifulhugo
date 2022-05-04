@@ -31,11 +31,11 @@
   one: "palavra"
   other: "palavras"
 - id: privacyTerms
-  translation: "Política de privacidade"
+  translation: "Política de Privacidade"
 - id: serviceTerms
   translation: "Termos de Serviço"
 - id: aboutUs
-  translation: "Sobre nós"
+  translation: "Sobre Nós"
 
 
 # 404 page
