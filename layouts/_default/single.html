@@ -91,7 +91,7 @@
         {{ end }}
   {{ end }}
 
-        {{ with .Site.Params.fccomments }}
+        {{ if (isset .Site.Params.fccomments) }}
         <p> TTT </p>
 
           <div class="staticman-comments">
