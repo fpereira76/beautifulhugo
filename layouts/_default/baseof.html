@@ -5,23 +5,18 @@
   </head>
   <body>
 
-    {{ if hugo.IsProduction }}
-       {{ if .Site.fccomments | default false }}
+       {{ with .Site.fccomments }}
           <div id="fb-root"></div>
-          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v13.0" nonce="IKrjn02Q"></script>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v13.0" nonce="{{ . }}"></script>
        {{ end }}
-    {{ end }}
 
     {{ partial "nav.html" . }}
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
     {{ block "main" . }}{{ end }}
 
-    {{ if hugo.IsProduction }}
-       {{ if .Site.fccomments | default false }}
-          <div class="fb-comments" data-href="https://www.geneablog.com.br" data-width="" data-numposts="5"></div>       
+       {{ with .Site.fccomments }}
+          <div class="fb-comments" data-href="{{ .Site.Params.baseurl }}" data-width="" data-numposts="5"></div>
        {{ end }}
-    {{ end }}
-
 
 
     {{ partial "footer.html" . }}
