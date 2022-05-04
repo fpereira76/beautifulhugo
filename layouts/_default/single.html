@@ -61,7 +61,8 @@
 
 
       <!-- {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (in .Site.Params.postSections .Type))) }} -->
-      {{ if (default false .Params.showcomments) }}
+
+      {{ if .Page.Params.showcomments }}
 
       <p> TTT </p>
 
