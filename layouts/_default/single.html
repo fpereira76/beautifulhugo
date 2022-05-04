@@ -14,7 +14,9 @@
         {{ end }}
 
         {{ if (default true .Params.showcopyright) }}
-           {{ partial "licensing" }}
+          {{ with (default false (default .Site.Params.copyright .Params.copyright)) }}
+            {{ partial (path.Join "licensing" .) }}
+          {{ end }}
         {{ end }}
 
         {{ if $.Param "socialShare" }}
@@ -59,14 +61,7 @@
         </ul>
       {{ end }}
 
-      {{ with .Site.Params.fccomments }}
-        <div class="staticman-comments">
-         <div class="fb-comments" data-href="{{$.Site.BaseURL}}" data-width="" data-numposts="5"></div>
-        </div>
-     {{ end }}
-
-      {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (in .Site.Params.postSections .Type))) }}
-
+      {{ if (and .Site.Params.comments (default false .Params.showcomments)) }}
         {{ if .Site.DisqusShortname }}
           {{ if .Site.Params.delayDisqus }}
           <div class="disqus-comments">
@@ -92,7 +87,14 @@
             {{ partial "staticman-comments.html" . }}
           </div>
         {{ end }}
-     {{ end }}
+
+        {{ with .Site.Params.fccomments }}
+          <div class="staticman-comments">
+           <div class="fb-comments" data-href="{{$.Site.BaseURL}}" data-width="" data-numposts="5"></div>
+          </div>
+       {{ end }}
+
+   {{ end }}
 
     </div>
   </div>
