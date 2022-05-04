@@ -50,7 +50,7 @@
         <p class="credits theme-by text-muted">
           {{ if .Site.Params.privacyTerms }}
             <a href="{{ .Site.Params.privacyTerms | absLangURL }}">{{ i18n "privacyTerms" . | safeHTML }}</a>
-            {{ if or ((isset .Site.Params.serviceTerms) (isset .Site.Params.aboutUs)) }}
+            {{ if or ((isset .Site.Params "serviceTerms") (isset .Site.Params "aboutUs")) }}
                &nbsp;&bull;&nbsp;
             {{ end }}
           {{ end }}
