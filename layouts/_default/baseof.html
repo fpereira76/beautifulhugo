@@ -15,7 +15,9 @@
     {{ block "main" . }}{{ end }}
 
        {{ with .Site.Params.fccomments }}
-          <div class="fb-comments" data-href="{{ .Page.Site.BaseURL }}" data-width="" data-numposts="5"></div>
+          {{ $.Scratch.Set "baseurl" .Page.Site.BaseURL }}
+          {{ $baseurl := $Scratch.Get "baseurl"}}
+          <div class="fb-comments" data-href="{{$baseurl}}" data-width="" data-numposts="5"></div>
        {{ end }}
 
 
