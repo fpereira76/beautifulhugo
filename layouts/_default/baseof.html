@@ -15,7 +15,7 @@
     {{ block "main" . }}{{ end }}
 
        {{ with .Site.Params.fccomments }}
-          <div class="fb-comments" data-href="{{ .Site.Params.baseurl }}" data-width="" data-numposts="5"></div>
+          <div class="fb-comments" data-href="{{ .Page.Site.BaseURL }}" data-width="" data-numposts="5"></div>
        {{ end }}
 
 
