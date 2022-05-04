@@ -59,10 +59,13 @@
         </ul>
       {{ end }}
 
+      {{ with .Site.Params.fccomments }}
+        <div class="staticman-comments">
+         <div class="fb-comments" data-href="{{$.Site.BaseURL}}" data-width="" data-numposts="5"></div>
+        </div>
+     {{ end }}
 
-      <!-- {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (in .Site.Params.postSections .Type))) }} -->
-
-      {{ if .Page.Params.showcomments }}
+      {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (in .Site.Params.postSections .Type))) }}
 
         {{ if .Site.DisqusShortname }}
           {{ if .Site.Params.delayDisqus }}
@@ -89,13 +92,7 @@
             {{ partial "staticman-comments.html" . }}
           </div>
         {{ end }}
-  {{ end }}
-
-        <p> TTT </p>
-
-          <div class="staticman-comments">
-           <div class="fb-comments" data-href="{{$.Site.BaseURL}}" data-width="" data-numposts="5"></div>
-          </div>
+     {{ end }}
 
     </div>
   </div>
