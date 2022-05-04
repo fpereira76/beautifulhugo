@@ -14,9 +14,6 @@
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
     {{ block "main" . }}{{ end }}
 
-       {{ with .Site.Params.fccomments }}
-          <div class="fb-comments" data-href="{{$.Site.BaseURL}}" data-width="" data-numposts="5"></div>
-       {{ end }}
 
 
     {{ partial "footer.html" . }}

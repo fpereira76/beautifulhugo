@@ -88,6 +88,12 @@
         {{ end }}
       {{ end }}
 
+      {{ with .Site.Params.fccomments }}
+         <div class="staticman-comments">
+            <div class="fb-comments" data-href="{{$.Site.BaseURL}}" data-width="" data-numposts="5"></div>
+         </div>
+      {{ end }}
+
     </div>
   </div>
 </div>
